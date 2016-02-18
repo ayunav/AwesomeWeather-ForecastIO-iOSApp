@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AVWTableViewController.h
 //  AVWeatherApp
 //
 //  Created by Ayuna Vogel on 2/15/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AVWTableViewController : UITableViewController
 
 @end
-

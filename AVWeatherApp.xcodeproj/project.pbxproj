@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		2900BAB51C725089001A382B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BAB41C725089001A382B /* main.m */; };
 		2900BAB81C725089001A382B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BAB71C725089001A382B /* AppDelegate.m */; };
-		2900BABB1C725089001A382B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BABA1C725089001A382B /* ViewController.m */; };
 		2900BABE1C725089001A382B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2900BABC1C725089001A382B /* Main.storyboard */; };
 		2900BAC01C725089001A382B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2900BABF1C725089001A382B /* Assets.xcassets */; };
 		2900BAC31C725089001A382B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2900BAC11C725089001A382B /* LaunchScreen.storyboard */; };
+		2900BACC1C725148001A382B /* AVWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BACB1C725148001A382B /* AVWTableViewController.m */; };
+		2900BACF1C72517A001A382B /* AVWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BACE1C72517A001A382B /* AVWDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		2900BAB41C725089001A382B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2900BAB61C725089001A382B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2900BAB71C725089001A382B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2900BAB91C725089001A382B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2900BABA1C725089001A382B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2900BABD1C725089001A382B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2900BABF1C725089001A382B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2900BAC21C725089001A382B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2900BAC41C725089001A382B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2900BACA1C725148001A382B /* AVWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWTableViewController.h; sourceTree = "<group>"; };
+		2900BACB1C725148001A382B /* AVWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWTableViewController.m; sourceTree = "<group>"; };
+		2900BACD1C72517A001A382B /* AVWDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWDetailViewController.h; sourceTree = "<group>"; };
+		2900BACE1C72517A001A382B /* AVWDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,13 @@
 		2900BAB21C725089001A382B /* AVWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				2900BABC1C725089001A382B /* Main.storyboard */,
 				2900BAB61C725089001A382B /* AppDelegate.h */,
 				2900BAB71C725089001A382B /* AppDelegate.m */,
-				2900BAB91C725089001A382B /* ViewController.h */,
-				2900BABA1C725089001A382B /* ViewController.m */,
-				2900BABC1C725089001A382B /* Main.storyboard */,
+				2900BACA1C725148001A382B /* AVWTableViewController.h */,
+				2900BACB1C725148001A382B /* AVWTableViewController.m */,
+				2900BACD1C72517A001A382B /* AVWDetailViewController.h */,
+				2900BACE1C72517A001A382B /* AVWDetailViewController.m */,
 				2900BABF1C725089001A382B /* Assets.xcassets */,
 				2900BAC11C725089001A382B /* LaunchScreen.storyboard */,
 				2900BAC41C725089001A382B /* Info.plist */,
@@ -149,8 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2900BABB1C725089001A382B /* ViewController.m in Sources */,
+				2900BACF1C72517A001A382B /* AVWDetailViewController.m in Sources */,
 				2900BAB81C725089001A382B /* AppDelegate.m in Sources */,
+				2900BACC1C725148001A382B /* AVWTableViewController.m in Sources */,
 				2900BAB51C725089001A382B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
