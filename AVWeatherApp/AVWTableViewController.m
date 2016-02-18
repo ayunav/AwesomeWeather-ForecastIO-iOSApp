@@ -8,6 +8,7 @@
 
 #import "AVWTableViewController.h"
 #import "AVCustomTableViewCell.h"
+#import "AVWeatherAPIManager.h"
 
 @interface AVWTableViewController ()
 
@@ -18,10 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // register nib for the custom table view cell
     UINib *nib = [UINib nibWithNibName:@"AVCustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"CellIdentifier"];
   
     [self setupUI];
+    
+    [AVWeatherAPIManager getWeatherData:^(id response, NSError *error) {
+        self.weekWeather = response[@"daily"][@"data"];
+        NSLog(@"%@", response); 
+    }];
     
     
     // Uncomment the following line to preserve selection between presentations.
