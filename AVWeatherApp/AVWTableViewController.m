@@ -18,7 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Awesome Weather App!"; 
+    UINib *nib = [UINib nibWithNibName:@"AVCustomTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"CellIdentifier"];
+  
+    [self setupUI];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -26,8 +30,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    UINib *nib = [UINib nibWithNibName:@"AVCustomTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"CellIdentifier"];
     
 }
 
@@ -35,6 +37,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - setup UI 
+
+- (void)setupUI {
+
+    self.navigationItem.title = @"Awesome Weather App!";
+    
+    // change the navBar title color to orange http://stackoverflow.com/questions/599405/iphone-navigation-bar-title-text-color
+    
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor orangeColor]}];
+ 
+    // change the back button color to orange
+    self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
+
+}
+
 
 #pragma mark - Table view data source
 
@@ -57,39 +75,10 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"DetailVCSegueId" sender:nil];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

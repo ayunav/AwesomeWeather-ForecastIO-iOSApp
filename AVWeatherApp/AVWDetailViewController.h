@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AVWeatherObject.h"
+
 @interface AVWDetailViewController : UIViewController
+
+@property (nonatomic) AVWeatherObject *weatherObject; 
 
 @end
