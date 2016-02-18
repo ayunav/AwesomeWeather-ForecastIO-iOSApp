@@ -14,6 +14,9 @@
 		2900BAC31C725089001A382B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2900BAC11C725089001A382B /* LaunchScreen.storyboard */; };
 		2900BACC1C725148001A382B /* AVWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BACB1C725148001A382B /* AVWTableViewController.m */; };
 		2900BACF1C72517A001A382B /* AVWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900BACE1C72517A001A382B /* AVWDetailViewController.m */; };
+		2906B8A21C7669D30089C81D /* AVWeatherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906B8A11C7669D30089C81D /* AVWeatherObject.m */; };
+		2906B8AB1C766B690089C81D /* AVCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906B8A91C766B690089C81D /* AVCustomTableViewCell.m */; };
+		2906B8AC1C766B690089C81D /* AVCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2906B8AA1C766B690089C81D /* AVCustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,11 @@
 		2900BACB1C725148001A382B /* AVWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWTableViewController.m; sourceTree = "<group>"; };
 		2900BACD1C72517A001A382B /* AVWDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWDetailViewController.h; sourceTree = "<group>"; };
 		2900BACE1C72517A001A382B /* AVWDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWDetailViewController.m; sourceTree = "<group>"; };
+		2906B8A01C7669D30089C81D /* AVWeatherObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWeatherObject.h; sourceTree = "<group>"; };
+		2906B8A11C7669D30089C81D /* AVWeatherObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWeatherObject.m; sourceTree = "<group>"; };
+		2906B8A81C766B690089C81D /* AVCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCustomTableViewCell.h; sourceTree = "<group>"; };
+		2906B8A91C766B690089C81D /* AVCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCustomTableViewCell.m; sourceTree = "<group>"; };
+		2906B8AA1C766B690089C81D /* AVCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVCustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +72,9 @@
 				2900BABC1C725089001A382B /* Main.storyboard */,
 				2900BAB61C725089001A382B /* AppDelegate.h */,
 				2900BAB71C725089001A382B /* AppDelegate.m */,
-				2900BACA1C725148001A382B /* AVWTableViewController.h */,
-				2900BACB1C725148001A382B /* AVWTableViewController.m */,
-				2900BACD1C72517A001A382B /* AVWDetailViewController.h */,
-				2900BACE1C72517A001A382B /* AVWDetailViewController.m */,
+				2906B8A31C7669DB0089C81D /* Model */,
+				2906B8AD1C766B6F0089C81D /* View */,
+				2906B8A41C7669E40089C81D /* Controller */,
 				2900BABF1C725089001A382B /* Assets.xcassets */,
 				2900BAC11C725089001A382B /* LaunchScreen.storyboard */,
 				2900BAC41C725089001A382B /* Info.plist */,
@@ -82,6 +89,36 @@
 				2900BAB41C725089001A382B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2906B8A31C7669DB0089C81D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2906B8A01C7669D30089C81D /* AVWeatherObject.h */,
+				2906B8A11C7669D30089C81D /* AVWeatherObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2906B8A41C7669E40089C81D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2900BACA1C725148001A382B /* AVWTableViewController.h */,
+				2900BACB1C725148001A382B /* AVWTableViewController.m */,
+				2900BACD1C72517A001A382B /* AVWDetailViewController.h */,
+				2900BACE1C72517A001A382B /* AVWDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2906B8AD1C766B6F0089C81D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2906B8A81C766B690089C81D /* AVCustomTableViewCell.h */,
+				2906B8A91C766B690089C81D /* AVCustomTableViewCell.m */,
+				2906B8AA1C766B690089C81D /* AVCustomTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +181,7 @@
 				2900BAC31C725089001A382B /* LaunchScreen.storyboard in Resources */,
 				2900BAC01C725089001A382B /* Assets.xcassets in Resources */,
 				2900BABE1C725089001A382B /* Main.storyboard in Resources */,
+				2906B8AC1C766B690089C81D /* AVCustomTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +196,8 @@
 				2900BAB81C725089001A382B /* AppDelegate.m in Sources */,
 				2900BACC1C725148001A382B /* AVWTableViewController.m in Sources */,
 				2900BAB51C725089001A382B /* main.m in Sources */,
+				2906B8A21C7669D30089C81D /* AVWeatherObject.m in Sources */,
+				2906B8AB1C766B690089C81D /* AVCustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +344,7 @@
 				2900BAC91C725089001A382B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

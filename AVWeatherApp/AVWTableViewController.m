@@ -7,6 +7,7 @@
 //
 
 #import "AVWTableViewController.h"
+#import "AVCustomTableViewCell.h"
 
 @interface AVWTableViewController ()
 
@@ -17,11 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Awesome Weather App!"; 
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UINib *nib = [UINib nibWithNibName:@"AVCustomTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"CellIdentifier"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +39,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 6;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    AVCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
+    
+    cell.dayOfTheWeekLabel.text = @"Monday";
+    //cell.weatherImageIcon.image = ;
+    cell.temperatureLabel.text = @"24 - 56";
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
