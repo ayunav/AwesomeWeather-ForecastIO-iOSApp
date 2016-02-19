@@ -10,6 +10,5 @@
 
 @interface AVWTableViewController : UITableViewController
 
-@property (nonatomic) NSMutableArray *weekWeather;
 
 @end

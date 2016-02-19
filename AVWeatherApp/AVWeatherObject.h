@@ -10,4 +10,16 @@
 
 @interface AVWeatherObject : NSObject
 
+// to be displayed in the Table VC 
+@property (nonatomic) NSString *day;
+@property (nonatomic) NSString *icon;
+@property (nonatomic) double temperatureMax;
+@property (nonatomic) double temperatureMin;
+
+// to be displayed in the Detail VC
+@property (nonatomic) NSString *summary;
+@property (nonatomic) NSString *chanceOfRain;
+@property (nonatomic) NSString *humidity;
+@property (nonatomic) NSString *windSpeed;
+
 @end

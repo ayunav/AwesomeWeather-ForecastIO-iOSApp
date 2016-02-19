@@ -18,7 +18,6 @@
 		2906B8A21C7669D30089C81D /* AVWeatherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906B8A11C7669D30089C81D /* AVWeatherObject.m */; };
 		2906B8AB1C766B690089C81D /* AVCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906B8A91C766B690089C81D /* AVCustomTableViewCell.m */; };
 		2906B8AC1C766B690089C81D /* AVCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2906B8AA1C766B690089C81D /* AVCustomTableViewCell.xib */; };
-		2906B8B01C7684280089C81D /* AVWeatherAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906B8AF1C7684280089C81D /* AVWeatherAPIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +39,6 @@
 		2906B8A81C766B690089C81D /* AVCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCustomTableViewCell.h; sourceTree = "<group>"; };
 		2906B8A91C766B690089C81D /* AVCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCustomTableViewCell.m; sourceTree = "<group>"; };
 		2906B8AA1C766B690089C81D /* AVCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVCustomTableViewCell.xib; sourceTree = "<group>"; };
-		2906B8AE1C7684280089C81D /* AVWeatherAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVWeatherAPIManager.h; sourceTree = "<group>"; };
-		2906B8AF1C7684280089C81D /* AVWeatherAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVWeatherAPIManager.m; sourceTree = "<group>"; };
 		6A9A4CCF247360C28A40D674 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6BE3517B135D9F276F0EA8A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +112,6 @@
 			children = (
 				2906B8A01C7669D30089C81D /* AVWeatherObject.h */,
 				2906B8A11C7669D30089C81D /* AVWeatherObject.m */,
-				2906B8AE1C7684280089C81D /* AVWeatherAPIManager.h */,
-				2906B8AF1C7684280089C81D /* AVWeatherAPIManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,7 +272,6 @@
 				2900BACC1C725148001A382B /* AVWTableViewController.m in Sources */,
 				2900BAB51C725089001A382B /* main.m in Sources */,
 				2906B8A21C7669D30089C81D /* AVWeatherObject.m in Sources */,
-				2906B8B01C7684280089C81D /* AVWeatherAPIManager.m in Sources */,
 				2906B8AB1C766B690089C81D /* AVCustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
