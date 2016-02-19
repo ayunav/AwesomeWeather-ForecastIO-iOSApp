@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="72" width="560" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-rz-DPq">
-                                        <rect key="frame" x="230" y="25" width="100" height="100"/>
+                                        <rect key="frame" x="230" y="40" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="9jj-ua-7FU"/>
                                             <constraint firstAttribute="height" constant="100" id="S9W-yK-ArM"/>
@@ -32,15 +32,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="fjM-rz-DPq" firstAttribute="centerX" secondItem="LPV-pQ-gOm" secondAttribute="centerX" id="AHS-yl-jCz"/>
+                                    <constraint firstAttribute="bottom" secondItem="fjM-rz-DPq" secondAttribute="bottom" constant="10" id="F3H-vY-g2K"/>
                                     <constraint firstAttribute="height" constant="150" id="GSG-nT-dqo"/>
                                     <constraint firstItem="fjM-rz-DPq" firstAttribute="centerY" secondItem="LPV-pQ-gOm" secondAttribute="centerY" id="Hfp-Z2-luK"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hfp-Z2-luK"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQk-Nn-oWm">
-                                <rect key="frame" x="20" y="224" width="560" height="150"/>
+                                <rect key="frame" x="20" y="224" width="560" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSr-wM-oLL">
-                                        <rect key="frame" x="144" y="64" width="157" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSr-wM-oLL">
+                                        <rect key="frame" x="15" y="25" width="530" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,13 +54,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="0Fl-s9-9dL"/>
+                                    <constraint firstAttribute="height" constant="100" id="0Fl-s9-9dL"/>
+                                    <constraint firstItem="eSr-wM-oLL" firstAttribute="top" secondItem="DQk-Nn-oWm" secondAttribute="top" constant="25" id="5kN-Sd-2eY"/>
+                                    <constraint firstItem="eSr-wM-oLL" firstAttribute="leading" secondItem="DQk-Nn-oWm" secondAttribute="leading" constant="15" id="IIG-hM-3ka"/>
                                     <constraint firstItem="eSr-wM-oLL" firstAttribute="centerY" secondItem="DQk-Nn-oWm" secondAttribute="centerY" id="NYB-e2-A13"/>
+                                    <constraint firstAttribute="trailing" secondItem="eSr-wM-oLL" secondAttribute="trailing" constant="15" id="eFJ-Ei-zY9"/>
                                     <constraint firstItem="eSr-wM-oLL" firstAttribute="centerX" secondItem="DQk-Nn-oWm" secondAttribute="centerX" id="vAD-Ef-EA9"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NYB-e2-A13"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkZ-XO-vxF">
-                                <rect key="frame" x="300" y="382" width="280" height="198"/>
+                                <rect key="frame" x="300" y="332" width="280" height="248"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTx-Cl-aN2">
                                         <rect key="frame" x="8" y="8" width="42" height="21"/>
@@ -86,7 +100,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dP0-du-mND">
-                                <rect key="frame" x="20" y="382" width="280" height="198"/>
+                                <rect key="frame" x="20" y="332" width="280" height="248"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chance of rain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2P-Ke-UW8">
                                         <rect key="frame" x="156" y="8" width="116" height="21"/>
@@ -138,6 +152,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dP0-du-mND" secondAttribute="bottom" constant="20" id="tOS-LA-HSd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chanceOfRainLabel" destination="CTx-Cl-aN2" id="n2R-dG-LtH"/>
+                        <outlet property="humidityLabel" destination="uL0-F7-Rqx" id="e8c-0d-NYJ"/>
+                        <outlet property="weatherIcon" destination="fjM-rz-DPq" id="67p-zp-48p"/>
+                        <outlet property="weatherSummaryLabel" destination="eSr-wM-oLL" id="47T-OY-PIJ"/>
+                        <outlet property="windSpeedLabel" destination="htA-3e-Qli" id="a53-01-XzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

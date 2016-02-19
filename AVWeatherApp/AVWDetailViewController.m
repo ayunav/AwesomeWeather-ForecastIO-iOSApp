@@ -10,28 +10,29 @@
 
 @interface AVWDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *weatherIcon;
+
+@property (weak, nonatomic) IBOutlet UILabel *weatherSummaryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *chanceOfRainLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
+
 @end
 
 @implementation AVWDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.weatherIcon.image = [UIImage imageNamed:self.weatherObject.icon];
+    self.weatherSummaryLabel.text = self.weatherObject.summary;
+    self.chanceOfRainLabel.text = self.weatherObject.chanceOfRain;
+    self.humidityLabel.text = self.weatherObject.humidity;
+    self.windSpeedLabel.text = self.weatherObject.windSpeed;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
