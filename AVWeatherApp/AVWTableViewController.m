@@ -53,10 +53,9 @@
                  weatherObject.temperatureMin = [result[@"temperatureMin"] doubleValue];
                  
                  
-                 // ?
-                 weatherObject.chanceOfRain = [NSString stringWithFormat:@"%.0f%%", [result[@"precipProbability"] doubleValue]];  // ?
-                 weatherObject.humidity = [NSString stringWithFormat:@"%.2f%%", [result [@"humidity"]doubleValue]];
-                 weatherObject.windSpeed = [NSString stringWithFormat:@"%0.2f% mph", [result[@"windSpeed"] doubleValue]];
+                 weatherObject.chanceOfRain = [NSString stringWithFormat:@"%ld%%", [result[@"precipProbability"] integerValue]];  
+                 weatherObject.humidity = [NSString stringWithFormat:@"%.0f%%", [result [@"humidity"]doubleValue]];
+                 weatherObject.windSpeed = [NSString stringWithFormat:@"%.1f mph", [result[@"windSpeed"] doubleValue]];
                  
                  
                  // to get the day of the week string for the label in the table view cell
