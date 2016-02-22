@@ -1,5 +1,5 @@
 # weather-forecast-iOS-app
-Simple weather iOS app using Forecast.io API
+Simple weather iOS app that pulls daily weather data from Forecast.io API
 
 **Technical Implementation**
 
